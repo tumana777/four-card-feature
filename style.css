@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAFAFA;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 80px;
+    font-weight: 275;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+    color: #4D4F62;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+    color: #4D4F62;
+}
+
+header p {
+    margin-top: 13px;
+    margin-bottom: 64px;
+    width: 540px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.104167px;
+    color: #4D4F62;
+    opacity: 0.5;
+}
+
+.cards {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+    border-radius: 8px;
+}
+
+#card-1 {
+    grid-area: 1/1/span 2/span 1;
+    align-self: center;
+}
+
+#card-2 {
+    grid-area: 1/2/span 1/span 1;
+}
+
+#card-3 {
+    grid-area: 2/2/span 1/span 1;
+}
+
+#card-4 {
+    grid-area: 1/3/span 2/span 1;
+    align-self: center;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #44D3D2;
+}
+
+#card-2::before {
+    background-color: #EA5454;
+}
+
+#card-3::before {
+    background-color: #FCAE4A;
+}
+
+#card-4::before {
+    background-color: #549EF2;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4D4F62;
+}
+
+.card p {
+    margin-top: 6px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.0902778px;
+    color: #4D4F62;
+    opacity: 0.5;
+}
+
+img {
+    align-self: flex-end;
+}
+
+/***************************************** Responsive Tablet *****************************************/
+
+@media (max-width: 1130px) {
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .card p {
+        margin-bottom: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.166667px;
+        color: #4D4F62;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.166667px;
+        color: #4D4F62;
+    }
+
+    header p {
+        width: 311px;
+        margin-bottom: 76px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .card {
+        padding: 28px;
+        width: 311px;
+        height: 222px;
+    }
+}
